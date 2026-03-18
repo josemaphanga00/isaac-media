@@ -11178,7 +11178,7 @@ body {
 
 .projects-section {
   padding: 4.5rem 0;
-}
+}               
 
 .projects-section h2 {
   font-size: 3rem;
@@ -11210,6 +11210,41 @@ body {
   .projects-section .row {
     margin-left: 15px;
   }
+
+  .first-image {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.custom-img {
+  border-top-left-radius: 20px;
+  /* border-bottom-left-radius: 20px; */
+}
+
+.custom-box {
+  border-top-right-radius: 20px;
+  /* border-bottom-right-radius: 20px; */
+}
+
+.south-east-custom-img {
+  /* border-top-left-radius: 20px; */
+  border-bottom-right-radius: 20px;
+}
+
+.south-west-custom-box {
+  /* border-top-right-radius: 20px; */
+  border-bottom-left-radius: 20px;
+}
+
+.project {
+  background-color: #f4c542; /* warm premium yellow */
+}
+
+
+  /* .projects-section img {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+} */
 }
 
 
@@ -11276,14 +11311,22 @@ body {
 
 
 /* PORTFOLIO STYLE */
-#portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
+#our-work {
+  padding-top: 5rem;
+}
+
+#our-work .text-uppercase {
+  font-size: 3rem;
+}
+
+#our-work .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
   max-width: 1920px;
 }
-#portfolio .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
+#our-work .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
   position: relative;
   display: block;
 }
-#portfolio .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption, #portfolio .container-xxl .portfolio-box .portfolio-box-caption {
+#our-work .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption, #portfolio .container-xxl .portfolio-box .portfolio-box-caption {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11299,16 +11342,16 @@ body {
   transition: opacity 0.25s ease;
   text-align: center;
 }
-#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
+#our-work .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
 }
-#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
+#our-work .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
   font-size: 1.2rem;
 }
-#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
+#our-work .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
 
@@ -11396,12 +11439,15 @@ header.masthead .masthead-heading {
   max-width: 26rem;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 5rem;
+  /* padding-top: 2rem; */
 }
 #portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
   margin: 0 auto;
 }
+
 /* #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
   position: absolute;
@@ -11421,10 +11467,18 @@ header.masthead .masthead-heading {
   opacity: 1;
 }
 #portfolio .portfolio-item .portfolio-caption {
-  padding: 10rem;
+  padding: 8rem;
   text-align: center;
-  background-color: yellow;
+  background-color: #f4c542;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
+
+#portfolio .portfolio-item .portfolio-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+} 
+
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11483,3 +11537,127 @@ header.masthead .masthead-heading {
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
 } */
+
+
+/* FAQ */
+/* #faq {
+  background-color: #000;
+  color: #fff;
+}
+
+#faq h2 {
+  color: #f4c542;
+  letter-spacing: 1px;
+}
+
+#faq .accordion-button:hover {
+  background-color: #1a1a1a;
+}
+
+#faq .accordion-item {
+  background-color: #111;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#faq .accordion-button {
+  background-color: #111;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background-color: #000;
+  color: #f4c542;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  box-shadow: inset 4px 0 0 #f4c542;
+}
+
+#faq .accordion-button::after {
+  filter: invert(1);
+}
+
+#faq .accordion-body {
+  background-color: #111;
+  color: #ccc;
+  line-height: 1.6;
+} */
+
+
+
+.text-uppercase {
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+/* SECTION BACKGROUND */
+#faq {
+  background-color: #000;
+  color: #fff;
+  padding: 6rem 0;
+}
+
+/* ACCORDION ITEM (CARD) */
+#basicAccordion .accordion-item {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* REMOVE DEFAULT BOOTSTRAP BORDER LINE */
+#basicAccordion .accordion-button {
+  border: none;
+}
+
+/* QUESTION BUTTON */
+#basicAccordion .accordion-button {
+  background-color: #111;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1.2rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+#basicAccordion .accordion-button:hover {
+  background-color: #1a1a1a;
+}
+
+/* ACTIVE (OPENED) STATE */
+#basicAccordion .accordion-button:not(.collapsed) {
+  background-color: #000;
+  color: #f4c542;
+}
+
+/* YELLOW ACCENT LINE 🔥 */
+#basicAccordion .accordion-button:not(.collapsed) {
+  box-shadow: inset 4px 0 0 #f4c542;
+}
+
+/* ARROW ICON FIX (VISIBLE ON DARK) */
+#basicAccordion .accordion-button::after {
+  filter: invert(1);
+}
+
+/* ANSWER BODY */
+#basicAccordion .accordion-body {
+  background-color: #111;
+  color: #ccc;
+  padding: 1.2rem;
+  line-height: 1.6;
+}
+
+/* SMOOTH TRANSITION */
+.accordion-collapse {
+  transition: all 0.3s ease;
+}
