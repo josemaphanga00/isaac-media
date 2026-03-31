@@ -52,8 +52,17 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
+    // new SimpleLightbox({
+    //     elements: '#portfolio a.portfolio-box'
+    // });
 
+    document.querySelectorAll('.portfolio-box').forEach(box => {
+        box.addEventListener('click', function(e) {
+            e.preventDefault();
+            const imgSrc = this.getAttribute('data-img');
+            document.getElementById('modalImage').src = imgSrc;
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        });
+    });
 });

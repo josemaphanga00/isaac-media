@@ -11175,10 +11175,46 @@ body {
   
 } */
 
+#projects {
+  padding-top: 5rem;
+}
 
 .projects-section {
-  padding: 4.5rem 0;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
 }               
+
+.projects-section::before {
+  opacity: 1;
+}
+
+/* .projects-section::before {
+  background: red;
+} */
+
+  .projects-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../assets/img/lady-cam.jpg') center/cover no-repeat;
+    filter: blur(2px);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+
+  .projects-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .projects-section .container {
+    position: relative;
+    z-index: 2;
+  }
 
 .projects-section h2 {
   font-size: 3rem;
@@ -11189,7 +11225,7 @@ body {
   padding: 2rem;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 7rem;
     border-left: 0.5rem solid #64a19d;
@@ -11209,36 +11245,233 @@ body {
 
   .projects-section .row {
     margin-left: 15px;
-  }
+  } */
 
   .first-image {
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  backdrop-filter: blur(15px); /* THIS is the magic */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .custom-img {
   border-top-left-radius: 20px;
   /* border-bottom-left-radius: 20px; */
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  backdrop-filter: blur(15px); /* THIS is the magic */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .custom-box {
   border-top-right-radius: 20px;
-  /* border-bottom-right-radius: 20px; */
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  backdrop-filter: blur(15px); /* THIS is the magic */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .south-east-custom-img {
-  /* border-top-left-radius: 20px; */
   border-bottom-right-radius: 20px;
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  backdrop-filter: blur(15px); /* THIS is the magic */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .south-west-custom-box {
-  /* border-top-right-radius: 20px; */
   border-bottom-left-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  backdrop-filter: blur(15px); /* THIS is the magic */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  position: relative;
+  z-index: 3;
 }
 
-.project {
-  background-color: #f4c542; /* warm premium yellow */
+/* ===== PROJECTS SECTION ===== */
+#projects {
+    padding-top: 5rem;
 }
+
+.projects-section {
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../assets/img/lady-cam.jpg') center/cover no-repeat;
+    filter: blur(2px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.projects-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.projects-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.projects-section h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.projects-section .featured-text,
+.projects-section .project-text {
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+/* GLASSY / CARD STYLING */
+.first-image,
+.custom-img,
+.custom-box,
+.south-east-custom-img,
+.south-west-custom-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Rounded corners & borders */
+.first-image {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.custom-img {
+    border-top-left-radius: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.custom-box {
+    border-top-right-radius: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.south-east-custom-img {
+    border-bottom-right-radius: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.south-west-custom-box {
+    border-bottom-left-radius: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 3;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 992px) {
+
+    /* Section Heading */
+    .projects-section h2 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        padding: 1rem 1rem;
+    }
+
+    /* Featured / Project Text */
+    .projects-section .featured-text,
+    .projects-section .project-text {
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+        border-left: none; /* remove left border for mobile */
+    }
+
+    /* Glassy cards scale and spacing */
+    .first-image,
+    .custom-img,
+    .custom-box,
+    .south-east-custom-img,
+    .south-west-custom-box {
+        border-radius: 15px;
+        border-width: 1px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Stack project rows vertically */
+    .projects-section .row {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    /* Ensure images take full width */
+    .projects-section img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Reduce spacing inside cards */
+    .first-image,
+    .custom-img,
+    .custom-box,
+    .south-east-custom-img,
+    .south-west-custom-box {
+        padding: 1rem;
+    }
+}
+
+/* .project {
+  background-color: transparent; warm premium yellow f4c542
+  border-radius: 20px;
+  border-color: white;
+} */
+
+/* .project {
+  background: rgba(255, 255, 255, 0.08); transparent glass
+  backdrop-filter: blur(15px); THIS is the magic
+  -webkit-backdrop-filter: blur(15px); Safari support
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  position: relative;
+  z-index: 3;
+} */
 
 
   /* .projects-section img {
@@ -11310,19 +11543,21 @@ body {
 }
 
 
-/* PORTFOLIO STYLE */
-#our-work {
+/* OUR WORK STYLE */
+/* #our-work {
   padding-top: 5rem;
+
 }
 
 #our-work .text-uppercase {
   font-size: 3rem;
-}
+} */
 
-#our-work .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
+/* #our-work .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
   max-width: 1920px;
-}
-#our-work .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
+} */
+
+/* #our-work .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
   position: relative;
   display: block;
 }
@@ -11338,7 +11573,7 @@ body {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  background: rgba(18, 18, 18, 0.6);
   transition: opacity 0.25s ease;
   text-align: center;
 }
@@ -11353,9 +11588,102 @@ body {
 }
 #our-work .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+} */
+
+/* OUR WORK STYLE */
+#our-work {
+    padding-top: 5rem;
 }
 
+#our-work .text-uppercase {
+    font-size: 3rem;
+    font-weight: 700;
+}
 
+/* Portfolio Boxes */
+#our-work .portfolio-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+#our-work .portfolio-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+#our-work .portfolio-box:hover img {
+    transform: scale(1.05);
+}
+
+/* Caption Overlay */
+#our-work .portfolio-box-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    background: rgba(18, 18, 18, 0.6); /* Lighter exotic black */
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+/* Text inside caption */
+#our-work .project-category {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#our-work .project-name {
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+}
+
+/* Hover effect */
+#our-work .portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+/* Modal Background Blur */
+.modal-backdrop.show {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Image Size */
+.modal-dialog {
+    max-width: 600px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    #our-work .portfolio-box-caption {
+        opacity: 1; /* Always show captions */
+        background: rgba(18, 18, 18, 0.5); /* Lighter for mobile */
+    }
+
+    #our-work .text-uppercase {
+        font-size: 2rem;
+    }
+
+    #our-work .project-name {
+        font-size: 1rem;
+    }
+
+    #our-work .project-category {
+        font-size: 0.75rem;
+    }
+}
 
 /* NEW FEATURE STYLE */
 
@@ -11404,29 +11732,6 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 
-    /* .btn-xl {
-    padding: 1.5rem 1.8rem;
-    font-size: 1.8rem;
-    border-radius: 0.5rem;
-  } */
-
-    .btn-xl {
-    padding: 1.5rem 3rem;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    border-radius: 50px;
-  }
-
-    .btn-outline-custom {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 1.25rem 2.5rem;
-    /* font-size: 1.2rem; */
-    letter-spacing: 2px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  }
 
 }
 
@@ -11439,9 +11744,46 @@ header.masthead .masthead-heading {
   max-width: 26rem;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 5rem;
-  /* padding-top: 2rem; */
+  /* padding-bottom: 5rem; */
 }
+
+#portfolio {
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem;
+
+}
+
+#portfolio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url('../assets/img/baby-feet.jpg') center/cover no-repeat;
+
+  filter: blur(4px);
+  transform: scale(1.1);
+
+  z-index: 0;
+}
+
+#portfolio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  /* background: rgba(200,200,200,0.1); */
+  z-index: 1;
+}
+
+#portfolio .container {
+  position: relative;
+  z-index: 2;
+}
+
+
 #portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
@@ -11459,6 +11801,8 @@ header.masthead .masthead-heading {
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
 } */
+
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
   color: white;
@@ -11466,17 +11810,29 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
 }
+
+/* Portfolio-Cards */
 #portfolio .portfolio-item .portfolio-caption {
   padding: 8rem;
   text-align: center;
-  background-color: #f4c542;
+  background-color: transparent;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+
 }
 
 #portfolio .portfolio-item .portfolio-img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 } 
 
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
@@ -11496,6 +11852,54 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Portfolio Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    /* Section heading smaller on mobile */
+    .section-heading {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    /* Portfolio item images: keep border radius but fit mobile */
+    #portfolio .portfolio-item .portfolio-img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    /* Portfolio caption heading smaller */
+    #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Portfolio caption subheading smaller and centered */
+    #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    /* Adjust padding inside captions for mobile */
+    #portfolio .portfolio-item .portfolio-caption {
+        padding: 10rem;
+    }
+
+    /* Stack portfolio items vertically (if using grid/flex) */
+    #portfolio .row {
+        flex-direction: column;
+    }
+
+    #portfolio .col-lg-4, #portfolio .col-sm-6 {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* .portfolio-modal .modal-dialog {
@@ -11596,68 +12000,118 @@ header.masthead .masthead-heading {
   padding-top: 3rem;
 }
 
-/* SECTION BACKGROUND */
+/* ===== FAQ SECTION ===== */
+#basicAccordion {
+    padding-top: 5rem;
+}
+
 #faq {
-  background-color: #000;
-  color: #fff;
-  padding: 6rem 0;
+    background-color: #000;
+    color: #fff;
+    padding: 6rem 0;
 }
 
 /* ACCORDION ITEM (CARD) */
 #basicAccordion .accordion-item {
-  background-color: transparent;
-  border: none;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  overflow: hidden;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 /* REMOVE DEFAULT BOOTSTRAP BORDER LINE */
 #basicAccordion .accordion-button {
-  border: none;
-}
-
-/* QUESTION BUTTON */
-#basicAccordion .accordion-button {
-  background-color: #111;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 1.2rem;
-  box-shadow: none;
-  transition: all 0.3s ease;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1.2rem 1rem;
+    box-shadow: none;
+    transition: all 0.3s ease;
 }
 
 /* HOVER EFFECT */
 #basicAccordion .accordion-button:hover {
-  background-color: #1a1a1a;
+    background-color: #f9f5ec;
+    color: #121212;
 }
 
 /* ACTIVE (OPENED) STATE */
 #basicAccordion .accordion-button:not(.collapsed) {
-  background-color: #000;
-  color: #f4c542;
-}
-
-/* YELLOW ACCENT LINE 🔥 */
-#basicAccordion .accordion-button:not(.collapsed) {
-  box-shadow: inset 4px 0 0 #f4c542;
+    background-color: #f9f5ec;
+    color: #f4c542;
+    box-shadow: inset 4px 0 0 #f4c542; /* yellow accent line */
 }
 
 /* ARROW ICON FIX (VISIBLE ON DARK) */
 #basicAccordion .accordion-button::after {
-  filter: invert(1);
+    filter: invert(1);
 }
 
 /* ANSWER BODY */
 #basicAccordion .accordion-body {
-  background-color: #111;
-  color: #ccc;
-  padding: 1.2rem;
-  line-height: 1.6;
+    background-color: white;
+    color: #121212; /* fixed invalid color */
+    padding: 1rem;
+    line-height: 1.6;
 }
 
 /* SMOOTH TRANSITION */
 .accordion-collapse {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    #faq {
+        padding: 3rem 1rem;
+    }
+
+    #basicAccordion .accordion-button {
+        font-size: 1rem; /* slightly smaller font for mobile */
+        padding: 1rem;
+    }
+
+    #basicAccordion .accordion-body {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+    }
+
+    #basicAccordion .accordion-item {
+        margin-bottom: 0.8rem;
+    }
+}
+
+
+
+
+/* OUR TEAM */
+#team {
+  padding-top: 5rem;
+}
+
+.team-member {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.team-member img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border-color: #f4c542;
+}
+.team-member h4, .team-member .h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.img-brand {
+  height: 2.75rem;
+}
+
+.row.team-row {
+    justify-content: center;
 }
