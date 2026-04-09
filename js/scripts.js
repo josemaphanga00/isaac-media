@@ -64,5 +64,11 @@ window.addEventListener('DOMContentLoaded', event => {
             const modal = new bootstrap.Modal(document.getElementById('imageModal'));
             modal.show();
         });
+
+    document.querySelectorAll('.masonry img').forEach(img => {
+        img.onload = () => {
+        img.style.opacity = "1";
+        };
+    });
     });
 });
